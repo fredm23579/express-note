@@ -1,4 +1,4 @@
-# 11 Express Note
+# Express Note
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
@@ -7,7 +7,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
 
@@ -41,29 +40,35 @@ WHEN I click on the "New Note" button in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column and the button disappears
 ```
 
+## Installation
+
+```bash
+git clone git@github.com:fredm23579/express-note.git
+```
+
 ## Demo
 
 The following GIF shows the web application's appearance and functionality:
 
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./assets/demo.gif)
+![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./public/assets/demo.gif)
 
 ## Usage
 
-On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
+On the back end, the application includes a `db.json` file that is used to store and retrieve notes using the `fs` module.
 
-The following HTML routes should be created:
+The following HTML routes have been created:
 
 * `GET /notes` should return the `notes.html` file.
 
 * `GET *` should return the `index.html` file.
 
-The following API routes should be created:
+The following API routes have been created:
 
-* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
+* `GET /api/notes` reads the `db.json` file and returns all saved notes as a JSON.
 
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+* `POST /api/notes` receives a new note to save on the request body, adds it to the `db.json` file, and then returns the new note to the client. Each note a unique id when it's saved.
 
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+* `DELETE /api/notes/:id` receives a query parameter that contains the id of a note to delete. To delete a note, all notes from the `db.json` file are read, then the note with the given `id` property is removed, then the notes are rewritten to the `db.json` file.
 
 ## Repo Link & Live App Link
 

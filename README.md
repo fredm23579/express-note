@@ -72,8 +72,9 @@ The following API routes have been created:
 
 ## Repo Link & Live App Link
 
-[Repo Link](https://github.com/fredm23579/express-note)
-[Live App on Heroku](https://github.com/)
+* [Repo Link](https://github.com/fredm23579/express-note)
+
+* [Live App on Heroku](https://github.com/)
 
 ## Contributing
 Contact the primary developer for contributions.
